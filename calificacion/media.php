@@ -9,6 +9,7 @@ include "../coneccion/coneccion.php";
     <title>Media</title>
 </head>
 <body>
+    <a href="../index.php"><p>Volver</p></a>
     <form action="media.php" method = "POST">
         Elija el alumno: <select name="alumno">
             <?php
@@ -31,15 +32,15 @@ include "../coneccion/coneccion.php";
         foreach($conn->query($sql) as $result){
             echo "<li>".$result["Nota"]."</li>";
             if($aux == 0){
-                $aux = $result["nota"];
+                $aux = $result["Nota"];
             }else{
-                $aux = $aux + $result["nota"];
+                $aux = $aux + $result["Nota"];
             }
             $cont ++;
         }
         echo "</ul>";
         $media = $aux / $cont;
-        
+        echo "<p> La media del alumno elegido es de: " .$media. "</p>";
     }else{
         echo"mondongo";
     }

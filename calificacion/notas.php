@@ -17,7 +17,7 @@
                 $idAl = $_POST["alNota"];
                 $_SESSION["auxiliarId"] = $idAl;
                 $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $sql = "select * from actividades INNER JOIN unidades on actividades.IdU = unidades.IdU inner join asignaturas on unidades.IdAsig = asignaturas.IdAsig inner JOIN alasi on asignaturas.IdAsig = alasi.IdAsig where alasi.IdAlu = " .$_POST["alNota"];
+                $sql = "SELECT actividades.nombre, actividades.IdA from actividades INNER JOIN unidades on actividades.IdU = unidades.IdU inner join asignaturas on unidades.IdAsig = asignaturas.IdAsig inner JOIN alasi on asignaturas.IdAsig = alasi.IdAsig where alasi.IdAlu = " .$_POST["alNota"];
                 foreach($conn -> query($sql) as $resultado){
                     echo "<option value = '".$resultado["IdA"]."'>".$resultado["nombre"]."</option>";
                 }
