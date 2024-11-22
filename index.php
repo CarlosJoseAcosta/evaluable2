@@ -16,15 +16,22 @@
     <a href="insertar/actIns.php"><button>Insertar actividades</button></a><br>
     <h3>Calificaciones</h3>
     <a href = "calificacion/elegirAl.php"><button>Añadir calificaciones</button></a>
-    <a href="calificacion/media.php"><button>Ver media de alumnos</button></a><br>
+    <a href="calificacion/mediaTotal.php"><button>Ver media de alumno por asignatura</button></a>
+    <a href="calificacion/media.php"><button>Ver la media total del alumno</button></a><br>
     <h3>Gestion de alumnos y actividades</h3>
     <a href="modificar/eliAsigphp.php"><button>Eliminar asignatura</button></a>
     <a href="modificar/eliAlu.php"><button>Eliminar alumno</button></a>
     <a href="modificar/eliTemario.php"><button>Eliminar temario</button></a>
     <a href="modificar/eliActi.php"><button>Eliminar actividad</button></a><br>
-    <a href=""><button>Actualizar asignatura</button></a>
-    <a href=""><button>Actualizar alumno</button></a>
-    <a href=""><button>Actualizar temario</button></a>
-    <a href=""><button>Actualizar actividad</button></a>
+    <a href="modificar/actuAsig.php"><button>Actualizar asignatura</button></a>
+    <a href="modificar/actuAlu.php"><button>Actualizar alumno</button></a>
+    <a href="modificar/actuTem.php"><button>Actualizar temario</button></a>
+    <a href="modificar/actuActi.php"><button>Actualizar actividad</button></a>
+    <?php 
+        if(isset($_SESSION["errores"]["db"])){
+            echo $_SESSION["errores"]["db"];
+            session_destroy();
+        }
+    ?>
 </body>
 </html>

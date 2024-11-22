@@ -9,6 +9,7 @@
     <title>Notas</title>
 </head>
 <body>
+    <a href="../index.php"><p>volver</p></a>
     <form action="notas.php" method = "POST">
         <label>Elige el alumno que deseas calificar<select name="alNota">
             <?php 

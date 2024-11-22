@@ -11,6 +11,7 @@
     <title>Notas</title>
 </head>
 <body>
+<a href = "../index.php"><p>Volver a inicio</p></a>
     <form action="../insertar/LogicaInsercion.php" method = "POST">
         <label>Elige la actividad que sera calificada<select name="actNota">
             <?php 
@@ -29,6 +30,6 @@
         <label>Nota que saco el alumno:<input type="number" name = "nota"></label><br>
         <input type="submit">
     </form>
-    <a href = "../index.php"><button>Volver a inicio</button></a>
+    
 </body>
 </html>
